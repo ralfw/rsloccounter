@@ -15,20 +15,15 @@ namespace rsloc.DomäneTests
     [TestFixture]
     public class StatistikTests
     {
-        private Quellcode quellcode;
-
-        public StatistikTests()
-        {
-            string[] lines = { "Eins", "// Zwei", "Drei", "/* Vier", "Fünf", "Sechs */", "Sieben" };
-            this.quellcode.Codezeilen = lines;
-        }
-
         [Test]
         public void TestSummeLoc()
         {
+            var quellcode = new Quellcode();
+            string[] lines = { "Eins", "// Zwei", "Drei", "/* Vier", "Fünf", "Sechs */", "Sieben", "" };
+            quellcode.Codezeilen = lines;
             var testclass = new Statistik();
-            testclass.LOC_summieren(quellcode);
-            Assert.AreEqual(7, testclass.SummeLOC);
+            testclass.LOC_summieren(this.quellcode);
+            Assert.AreEqual(8, testclass.SummeLOC);
         }
     }
 }
