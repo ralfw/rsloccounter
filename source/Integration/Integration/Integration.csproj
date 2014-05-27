@@ -1,29 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D8D81166-DDBF-4E2F-8722-B57DF59C7942}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{CAE7E90A-BD14-4421-AE70-A72695E39B59}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>rsloc.application</RootNamespace>
-    <AssemblyName>rsloc.application</AssemblyName>
+    <RootNamespace>Integration</RootNamespace>
+    <AssemblyName>Integration</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,12 +33,6 @@
     <Reference Include="rsloc.contracts">
       <HintPath>..\..\..\bin.contracts\rsloc.contracts.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleInjector">
-      <HintPath>..\packages\SimpleInjector.2.5.0\lib\net45\SimpleInjector.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleInjector.Diagnostics">
-      <HintPath>..\packages\SimpleInjector.2.5.0\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,30 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="Interactors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\source\Domäne\Domäne\Domäne.csproj">
-      <Project>{f5fc0be3-089c-4ba8-be13-accaee7d16f1}</Project>
-      <Name>Domäne</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\Integration\Integration\Integration.csproj">
-      <Project>{cae7e90a-bd14-4421-ae70-a72695e39b59}</Project>
-      <Name>Integration</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\PortalLoc\PortalLoc\PortalLoc.csproj">
-      <Project>{4c0a896e-dcfe-4e86-b11c-63ae1e0eddb1}</Project>
-      <Name>PortalLoc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\Provider\Provider\Provider.csproj">
-      <Project>{d6d27119-4e90-4558-aa34-af7f5d4b3090}</Project>
-      <Name>Provider</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

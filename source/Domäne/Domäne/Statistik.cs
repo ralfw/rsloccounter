@@ -14,7 +14,7 @@
 
         public void LOC_summieren(Quellcode quellcode)
         {
-            this.summeLoc += quellcode.Codezeilen.Count();
+            this.summeLoc += quellcode.Codezeilen.Length;
         }
 
         public int SummeLOC
