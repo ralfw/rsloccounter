@@ -42,6 +42,27 @@
 
         public Quellcode Mehrzeilige_Kommentare_schlucken(Quellcode quellcode)
         {
+            var puffer = new List<string>();
+            var mehrzeiliger_kommentar = false;
+
+            foreach (var codeZeile in quellcode.Codezeilen)
+            {
+                var zeile = codeZeile.TrimStart(' ');
+                if (!zeile.StartsWith("/*") && !mehrzeiliger_kommentar)
+                {
+                    puffer.Add(codeZeile);
+                }
+                else
+                {
+                    mehrzeiliger_kommentar = true;
+                }
+                if (zeile.EndsWith("*/"))
+                {
+                    mehrzeiliger_kommentar = false;
+                }
+            }
+
+            quellcode.Codezeilen = puffer.ToArray();
             return quellcode;
         }
     }
