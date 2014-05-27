@@ -1,4 +1,4 @@
-﻿namespace Domäne
+﻿namespace rsloc.Domäne
 {
     using System;
     using System.Collections.Generic;
