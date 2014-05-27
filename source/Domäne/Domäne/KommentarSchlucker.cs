@@ -28,11 +28,12 @@
         {
             var puffer = new List<string>();
 
-            foreach (var codezeile in quellcode.Codezeilen)
+            foreach (var codeZeile in quellcode.Codezeilen)
             {
-                if (!string.IsNullOrEmpty(codezeile))
+                var zeile = codeZeile.Trim(' ');
+                if (!string.IsNullOrEmpty(zeile))
                 {
-                    puffer.Add(codezeile);
+                    puffer.Add(codeZeile);
                 }
             }
 
