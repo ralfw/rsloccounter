@@ -22,7 +22,7 @@ namespace rsloc.DomäneTests
             string[] lines = { "Eins", "// Zwei", "Drei", "/* Vier", "Fünf", "Sechs */", "Sieben", "" };
             quellcode.Codezeilen = lines;
             var testclass = new Statistik();
-            testclass.LOC_summieren(this.quellcode);
+            testclass.LOC_summieren(quellcode);
             Assert.AreEqual(8, testclass.SummeLOC);
         }
     }
