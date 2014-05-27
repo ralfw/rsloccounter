@@ -6,23 +6,24 @@
     using System.Text;
     using System.Threading.Tasks;
 
+    using rsloc.contracts.daten;
     using rsloc.contracts.domäne;
 
     public class KommentarSchlucker: IKommentarschlucker
     {
-        public rsloc.contracts.daten.Quellcode Einzeilige_Kommentare_schlucken(rsloc.contracts.daten.Quellcode quellcode)
+        public Quellcode Einzeilige_Kommentare_schlucken(Quellcode quellcode)
         {
-            throw new NotImplementedException();
+            return quellcode;
         }
 
-        public rsloc.contracts.daten.Quellcode Leerzeilen_schlucken(rsloc.contracts.daten.Quellcode quellcode)
+        public Quellcode Leerzeilen_schlucken(Quellcode quellcode)
         {
-            throw new NotImplementedException();
+            return quellcode;
         }
 
-        public rsloc.contracts.daten.Quellcode Mehrzeilige_Kommentare_schlucken(rsloc.contracts.daten.Quellcode quellcode)
+        public Quellcode Mehrzeilige_Kommentare_schlucken(Quellcode quellcode)
         {
-            throw new NotImplementedException();
+            return quellcode;
         }
     }
 }
