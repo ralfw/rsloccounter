@@ -12,7 +12,7 @@ namespace rsloc.Provider
 {
     public class CsProvider : ICsProvider
     {
-        public void Quellcode_auslesen(string dateiname, System.Action<Quellcode> beiQuellcode)
+        public void Quellcode_auslesen(string dateiname, Action<Quellcode> beiQuellcode)
         {
             var quellcode = new Quellcode();
             quellcode.Codezeilen = File.ReadAllLines(dateiname);

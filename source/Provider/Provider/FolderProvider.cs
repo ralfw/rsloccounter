@@ -12,7 +12,8 @@ namespace rsloc.Provider
 {
     public class FolderProvider : IFolderProvider
     {
-        public void Ermittle_Dateinamen(string verzeichnisPfad, System.Action<string> beiDateiname)
+        //TODO: Diese Methode sollte eigentlich integrieren: klassifizieren -> dateinamen bestimmen
+        public void Ermittle_Dateinamen(string verzeichnisPfad, Action<string> beiDateiname)
         {
             var dirInfo = new DirectoryInfo(verzeichnisPfad);
             var fileInfos = dirInfo.EnumerateFiles("*.cs", SearchOption.AllDirectories);

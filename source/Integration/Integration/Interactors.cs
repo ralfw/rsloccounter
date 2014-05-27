@@ -19,7 +19,10 @@ namespace Integration
         private IKommentarschlucker kommentarSchlucker;
         private IStats stats;
 
-        public Interactors(IFolderProvider folderProvider, ICsProvider csProvider, IKommentarschlucker kommentarSchlucker, IStats stats)
+        public Interactors(IFolderProvider folderProvider, 
+                           ICsProvider csProvider, 
+                           IKommentarschlucker kommentarSchlucker, 
+                           IStats stats)
         {
             this.folderProvider = folderProvider;
             this.csProvider = csProvider;

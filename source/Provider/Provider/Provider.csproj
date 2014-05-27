@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="rsloc.contracts">
-      <HintPath>..\..\bin.contracts\rsloc.contracts.dll</HintPath>
+      <HintPath>..\..\..\bin.contracts\rsloc.contracts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
