@@ -21,5 +21,17 @@
 
             Assert.AreEqual(expexted, this.quellcode.Codezeilen);
         }
+
+        [Test()]
+        public void Mehrzeilige_Kommentare_schluckenTest()
+        {
+            string[] input = { "Eins", " ", "// Zwei", "Drei", "/* Vier", "Fünf", "Sechs */", "Sieben" };
+            string[] expexted = { "Eins", " ", "// Zwei", "Drei", "Sieben" };
+            this.quellcode.Codezeilen = input;
+            this.quellcode = this.schlucker.Mehrzeilige_Kommentare_schlucken(this.quellcode);
+
+            Assert.AreEqual(expexted, this.quellcode.Codezeilen);
+        }
+
     }
 }
