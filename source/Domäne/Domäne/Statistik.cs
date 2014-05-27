@@ -1,4 +1,4 @@
-﻿namespace Domäne
+﻿namespace rsloc.Domäne
 {
     using System;
     using System.Collections.Generic;
@@ -7,17 +7,23 @@
     using System.Threading.Tasks;
 
     using rsloc.contracts.domäne;
+    using rsloc.contracts.daten;
 
+    /// <summary>
+    /// Klasse die Statistik auf Quellcode berechnet
+    /// </summary>
     public class Statistik: IStats
     {
-        public void LOC_summieren(rsloc.contracts.daten.Quellcode quellcode)
+        private int summeLoc ;
+
+        public void LOC_summieren(Quellcode quellcode)
         {
             throw new NotImplementedException();
         }
 
         public int SummeLOC
         {
-            get { throw new NotImplementedException(); }
+            get { return this.summeLoc; }
         }
     }
 }
