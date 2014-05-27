@@ -12,17 +12,17 @@
     {
         public rsloc.contracts.daten.Quellcode Einzeilige_Kommentare_schlucken(rsloc.contracts.daten.Quellcode quellcode)
         {
-            throw new NotImplementedException();
+            return quellcode;
         }
 
         public rsloc.contracts.daten.Quellcode Leerzeilen_schlucken(rsloc.contracts.daten.Quellcode quellcode)
         {
-            throw new NotImplementedException();
+            return quellcode;
         }
 
         public rsloc.contracts.daten.Quellcode Mehrzeilige_Kommentare_schlucken(rsloc.contracts.daten.Quellcode quellcode)
         {
-            throw new NotImplementedException();
+            return quellcode;
         }
     }
 }
