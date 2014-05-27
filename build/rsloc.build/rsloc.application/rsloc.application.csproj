@@ -62,6 +62,10 @@
       <Project>{f5fc0be3-089c-4ba8-be13-accaee7d16f1}</Project>
       <Name>Domäne</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\source\Integration\Integration\Integration.csproj">
+      <Project>{cae7e90a-bd14-4421-ae70-a72695e39b59}</Project>
+      <Name>Integration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\source\PortalLoc\PortalLoc\PortalLoc.csproj">
       <Project>{4c0a896e-dcfe-4e86-b11c-63ae1e0eddb1}</Project>
       <Name>PortalLoc</Name>

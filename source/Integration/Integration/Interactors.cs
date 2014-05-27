@@ -10,7 +10,7 @@ using rsloc.contracts.domäne;
 
 namespace Integration
 {
-    class Interactors : IInteractors
+    public class Interactors : IInteractors
     {
         #region IInteractors Members
 
