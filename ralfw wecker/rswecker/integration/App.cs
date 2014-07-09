@@ -1,4 +1,5 @@
-﻿using rswecker.portal;
+﻿using System.Windows.Forms;
+using rswecker.portal;
 using rswecker.provider;
 
 namespace rswecker.integration
@@ -14,6 +15,8 @@ namespace rswecker.integration
             uhr.Uhrzeit += ui.Uhrzeit_anzeigen;
 
             uhr.Uhrzeit_starten();
+
+            Application.Run(ui);
         }
     }
 }
