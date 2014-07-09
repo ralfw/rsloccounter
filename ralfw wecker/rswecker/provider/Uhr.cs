@@ -24,14 +24,16 @@ namespace rswecker.provider
             _countdownTimer = new System.Threading.Timer(_ => {
                 Countdown(TimeSpan.FromSeconds(_verbleibendeSekunden));
                 _verbleibendeSekunden--;
-                if (_verbleibendeSekunden < 0)
+                if (_verbleibendeSekunden < 0) {
                     _countdownTimer.Change(System.Threading.Timeout.Infinite, System.Threading.Timeout.Infinite);
-
+                    Countdown_abgelaufen();
+                }
             }, null, 0, 1000);
         }
 
 
         internal event Action<DateTime> Uhrzeit;
         internal event Action<TimeSpan> Countdown;
+        internal event Action Countdown_abgelaufen;
     }
 }

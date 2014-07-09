@@ -18,24 +18,9 @@ namespace rswecker
             if (zeitwertIstWeckzeit)
                 _weckzeit = DateTime.Parse(zeitwert);
             else
-                _weckzeit = this.NowToTheSecond().Add(TimeSpan.Parse(zeitwert));
+                _weckzeit = this._now().Add(TimeSpan.Parse(zeitwert));
         }
-
 
         public TimeSpan VerbleibendeZeit { get { return _weckzeit.Subtract(_now()); } }
-
-
-        public void Weckzeit_erreicht(Action beiErreicht)
-        {            
-            var verbleibendeSekunden = (int)_weckzeit.Subtract(this.NowToTheSecond()).TotalSeconds;
-            if (verbleibendeSekunden == 1)
-                beiErreicht();
-        }
-
-
-        private DateTime NowToTheSecond()
-        {
-            return  new DateTime(_now().Year, _now().Month, _now().Day, _now().Hour, _now().Minute, _now().Second);
-        }
     }
 }
