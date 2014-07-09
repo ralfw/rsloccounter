@@ -82,9 +82,9 @@
             this.lblRestzeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestzeit.Location = new System.Drawing.Point(131, 77);
             this.lblRestzeit.Name = "lblRestzeit";
-            this.lblRestzeit.Size = new System.Drawing.Size(90, 25);
+            this.lblRestzeit.Size = new System.Drawing.Size(66, 25);
             this.lblRestzeit.TabIndex = 4;
-            this.lblRestzeit.Text = "00:00:00";
+            this.lblRestzeit.Text = "--:--:--";
             // 
             // lblUhrzeit
             // 

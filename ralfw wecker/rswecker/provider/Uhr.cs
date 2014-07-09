@@ -31,6 +31,10 @@ namespace rswecker.provider
             }, null, 0, 1000);
         }
 
+        internal void Countdown_stoppen() {
+            _countdownTimer.Change(System.Threading.Timeout.Infinite, System.Threading.Timeout.Infinite);
+        }
+
 
         internal event Action<DateTime> Uhrzeit;
         internal event Action<TimeSpan> Countdown;

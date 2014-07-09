@@ -16,8 +16,12 @@ namespace rswecker.portal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var wa = new Weckauftrag(this.txtZeitwert.Text, rdWeckzeit.Checked);
-            Start_gefordert(wa);
+            if (button1.Text == "Starten") {
+                var wa = new Weckauftrag(this.txtZeitwert.Text, rdWeckzeit.Checked);
+                Start_gefordert(wa);
+            }
+            else
+                Stopp_gefordert();
         }
 
 
@@ -36,6 +40,24 @@ namespace rswecker.portal
         }
 
 
+        public void Wecker_läuft()
+        {
+            _ctx.Send(_ =>
+            {
+                this.button1.Text = "Stopp";
+            }, null);
+        }
+        
+        public void Wecker_läuft_nicht()
+        {
+            _ctx.Send(_ => {
+                this.lblRestzeit.Text = "--:--:--";
+                this.button1.Text = "Starten";
+            }, null);
+        }
+
+
         internal event Action<Weckauftrag> Start_gefordert;
+        internal event Action Stopp_gefordert;
     }
 }
