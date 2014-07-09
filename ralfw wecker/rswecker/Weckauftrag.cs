@@ -28,8 +28,7 @@ namespace rswecker
         public void Weckzeit_erreicht(Action beiErreicht)
         {            
             var verbleibendeSekunden = (int)_weckzeit.Subtract(this.NowToTheSecond()).TotalSeconds;
-            Console.WriteLine("{0}, {1}, {2}", _weckzeit, this.NowToTheSecond(), verbleibendeSekunden);
-            if (verbleibendeSekunden == 0)
+            if (verbleibendeSekunden == 1)
                 beiErreicht();
         }
 
