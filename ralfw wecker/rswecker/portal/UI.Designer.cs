@@ -33,6 +33,7 @@
             this.rdRuhezeit = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.lblRestzeit = new System.Windows.Forms.Label();
+            this.lblUhrzeit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtZeitwert
@@ -46,7 +47,7 @@
             // rdWeckzeit
             // 
             this.rdWeckzeit.AutoSize = true;
-            this.rdWeckzeit.Location = new System.Drawing.Point(27, 59);
+            this.rdWeckzeit.Location = new System.Drawing.Point(30, 59);
             this.rdWeckzeit.Name = "rdWeckzeit";
             this.rdWeckzeit.Size = new System.Drawing.Size(70, 17);
             this.rdWeckzeit.TabIndex = 1;
@@ -79,17 +80,29 @@
             // 
             this.lblRestzeit.AutoSize = true;
             this.lblRestzeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestzeit.Location = new System.Drawing.Point(25, 141);
+            this.lblRestzeit.Location = new System.Drawing.Point(131, 77);
             this.lblRestzeit.Name = "lblRestzeit";
             this.lblRestzeit.Size = new System.Drawing.Size(90, 25);
             this.lblRestzeit.TabIndex = 4;
             this.lblRestzeit.Text = "00:00:00";
             // 
+            // lblUhrzeit
+            // 
+            this.lblUhrzeit.AutoSize = true;
+            this.lblUhrzeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUhrzeit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblUhrzeit.Location = new System.Drawing.Point(24, 131);
+            this.lblUhrzeit.Name = "lblUhrzeit";
+            this.lblUhrzeit.Size = new System.Drawing.Size(103, 29);
+            this.lblUhrzeit.TabIndex = 5;
+            this.lblUhrzeit.Text = "00:00:00";
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(243, 187);
+            this.Controls.Add(this.lblUhrzeit);
             this.Controls.Add(this.lblRestzeit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rdRuhezeit);
@@ -109,6 +122,7 @@
         private System.Windows.Forms.RadioButton rdRuhezeit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblRestzeit;
+        private System.Windows.Forms.Label lblUhrzeit;
     }
 }
 

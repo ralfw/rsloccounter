@@ -24,7 +24,7 @@ namespace rswecker
             var mp3 = new MP3();
             var uhr = new Uhr();
             var ep = new Entrypoints(uhr);
-            var app = new App(ui, mp3, ep);
+            var app = new App(ui, uhr, mp3, ep);
 
             Application.Run(ui);
         }

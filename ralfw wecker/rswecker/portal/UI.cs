@@ -28,6 +28,13 @@ namespace rswecker.portal
             }, null);
         }
 
+        public void Uhrzeit_anzeigen(DateTime uhrzeit)
+        {
+            _ctx.Send(_ => {
+                this.lblUhrzeit.Text = uhrzeit.ToString("HH:mm:ss");
+            }, null);
+        }
+
 
         internal event Action<Weckauftrag> Start_gefordert;
     }
